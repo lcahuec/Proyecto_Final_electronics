@@ -21,6 +21,24 @@ namespace proyectoFinal1.Models
 
         [StringLength(8, ErrorMessage = "8 Valor max. de digitos")]
         [RegularExpression("^\\d+$", ErrorMessage = "El campo solo acepta números.")]
+        [Display(Name = "Telefono: ")]
         public string telefono { get; set; }
     }
+
+    //clase validaciones producto
+    public class productoMetaData {
+
+        public int id { get; set; }
+        [Display(Name = "Nombre:")]
+        [Remote("nvalido", "productoes", ErrorMessage = "El producto ya exite")]
+        public string nombre { get; set; }
+
+        [Display(Name = "Bodega:")]
+        public Nullable<int> bodega { get; set; }
+
+        [Display(Name = "Precio Q.")]
+        [Required(ErrorMessage ="Debe Ingresar precio")]
+        public Nullable<decimal> precio { get; set; }
+    }
+
 }

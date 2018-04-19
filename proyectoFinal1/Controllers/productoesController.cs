@@ -20,7 +20,10 @@ namespace proyectoFinal1.Controllers
             var producto = db.producto.Include(p => p.bodega1);
             return View(producto.ToList());
         }
-
+        public JsonResult nvalido(string nombre)
+        {
+            return Json(!db.producto.Any(name => name.nombre == nombre), JsonRequestBehavior.AllowGet);
+        }
         // GET: productoes/Details/5
         public ActionResult Details(int? id)
         {
