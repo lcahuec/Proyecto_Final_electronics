@@ -20,6 +20,12 @@ namespace proyectoFinal1.Controllers
             return View(db.bodega.ToList());
         }
 
+        //validacion de dato duplicado
+        public JsonResult nvalido(string nombre)
+        {
+            return Json(!db.bodega.Any(name => name.nombre == nombre), JsonRequestBehavior.AllowGet);
+        }
+
         // GET: bodegas/Details/5
         public ActionResult Details(int? id)
         {

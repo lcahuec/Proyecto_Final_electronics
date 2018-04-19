@@ -224,6 +224,7 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MetaData.cs" />
     <Compile Include="Models\producto.cs">
       <DependentUpon>proyectoModel.tt</DependentUpon>
     </Compile>
