@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic´s   S.A.</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/animaciones/carousel")
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="navbar-collapse collapse">
+            @Html.ActionLink("Tecnología de punta", "", "", new { area = "" }, new { @class = "navbar-brand" })
+
+
+
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Ventas", "", "facturas/Create")</li>
+                <li>@Html.ActionLink("Crear Producto", "", "productoes")</li>
+                <li>@Html.ActionLink("Crear Bodega", "", "bodegas")</li>
+                <li>@Html.ActionLink("Reporte", "", "facturas")</li>
+            </ul>
+            @Html.Partial("_LoginPartial")
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="pie">
+                <center>
+
+                    <p>By Ludswing Cahuec 140402008</p>
+                    <p>&copy; @DateTime.Now.Year - Proyecto Programación 7 </p>
+                </center>
+            </div>
+
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/animaciones/carousel")
+ 
+  <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("lap");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000);
+      }
+
+      var myIndex2 = 0;
+      carousel2();
+      function carousel2() {
+          var i;
+          var x = document.getElementsByClassName("dis");
+          for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+          }
+          myIndex2++;
+          if (myIndex2 > x.length) { myIndex2 = 1 }
+          x[myIndex2 - 1].style.display = "block";
+          setTimeout(carousel2, 2500);
+      }
+
+      var myIndex3 = 0;
+      carousel3();
+      function carousel3() {
+          var i;
+          var x = document.getElementsByClassName("imp");
+          for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+          }
+          myIndex3++;
+          if (myIndex3 > x.length) { myIndex3 = 1 }
+          x[myIndex3 - 1].style.display = "block";
+          setTimeout(carousel3, 2800);
+      }
+    </script>
+
+
+</body>
+</html>
