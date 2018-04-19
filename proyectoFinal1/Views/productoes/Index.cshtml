@@ -3,12 +3,15 @@
 @{
     ViewBag.Title = "Index";
 }
+<center>
+    <h2>Productos</h2>
+</center>
 
-<h2>Productos</h2>
 
 <p>
-    @Html.ActionLink("Crear", "Create")
+   <a class="btn btn-primary" href="   http://localhost:49909/productoes/Create">Crear Nuevo</a> 
 </p>
+
 <table class="table">
     <tr class="titulos">
         <th>
@@ -34,10 +37,10 @@
         <td>
             @Html.DisplayFor(modelItem => item.bodega1.nombre)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        <td class="titulo2">
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }, new { @class = "btn btn-warning" }) 
+            @Html.ActionLink("Detalles", "Details", new { id=item.id }, new { @class = "btn btn-success" }) 
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.id }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }

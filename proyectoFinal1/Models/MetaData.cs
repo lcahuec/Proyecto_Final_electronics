@@ -12,16 +12,16 @@ namespace proyectoFinal1.Models
         public int id { get; set; }
         [Remote("nvalido", "bodegas", ErrorMessage = "La bodega ya exite")]
 
-        [Display(Name = "Nombre:")]
+        [Display(Name = "Nombre Bodega:")]
         public string nombre { get; set; }
 
         [Required(ErrorMessage = "Ingrese la Ubicacion")]
-        [Display(Name = "Ubicacion:")]
+        [Display(Name = "Ubicación:")]
         public string ubicacion { get; set; }
 
         [StringLength(8, ErrorMessage = "8 Valor max. de digitos")]
         [RegularExpression("^\\d+$", ErrorMessage = "El campo solo acepta números.")]
-        [Display(Name = "Telefono: ")]
+        [Display(Name = "Teléfono: ")]
         public string telefono { get; set; }
     }
 
@@ -33,12 +33,15 @@ namespace proyectoFinal1.Models
         [Remote("nvalido", "productoes", ErrorMessage = "El producto ya exite")]
         public string nombre { get; set; }
 
-        [Display(Name = "Bodega:")]
-        public Nullable<int> bodega { get; set; }
-
         [Display(Name = "Precio Q.")]
         [Required(ErrorMessage ="Debe Ingresar precio")]
         public Nullable<decimal> precio { get; set; }
+
+        [Display(Name = "Bodega:")]
+        public virtual bodega bodega1 { get; set; }
+        [Display(Name = "Bodega:")]
+        public Nullable<int> bodega { get; set; }
+
     }
 
 }
