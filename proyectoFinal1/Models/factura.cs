@@ -11,8 +11,9 @@ namespace proyectoFinal1.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
-    
+    [MetadataType(typeof(facturaMetaData))]
     public partial class factura
     {
         public int id { get; set; }

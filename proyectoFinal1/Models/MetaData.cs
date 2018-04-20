@@ -27,7 +27,6 @@ namespace proyectoFinal1.Models
 
     //clase validaciones producto
     public class productoMetaData {
-
         public int id { get; set; }
         [Display(Name = "Nombre:")]
         [Remote("nvalido", "productoes", ErrorMessage = "El producto ya exite")]
@@ -41,7 +40,29 @@ namespace proyectoFinal1.Models
         public virtual bodega bodega1 { get; set; }
         [Display(Name = "Bodega:")]
         public Nullable<int> bodega { get; set; }
+    }
 
+    public class facturaMetaData {
+        public int id { get; set; }
+
+        [Required(ErrorMessage ="Ingrese Nombre de Cliente")]
+        [Display(Name ="CLiente:")]
+        public string cliente { get; set; }
+
+        [Required(ErrorMessage ="Ingrese Nit")]
+        [Display (Name ="Nit:")]
+        public string nit { get; set; }
+
+        [Display(Name = "Producto:")]
+        public Nullable<int> producto { get; set; }
+
+        [Display(Name = "Cantidad:")]
+        [Required(ErrorMessage = "La cantidad es requerida")]
+        [Range(0, 100, ErrorMessage = "La cantidad debe ser entre 0 y 100")]
+        public Nullable<int> cantidad { get; set; }
+
+        [Display(Name = "Producto:")]
+        public virtual producto producto1 { get; set; }
     }
 
 }

@@ -54,7 +54,8 @@ namespace proyectoFinal1.Controllers
             {
                 db.factura.Add(factura);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Create");
+
             }
 
             ViewBag.producto = new SelectList(db.producto, "id", "nombre", factura.producto);
