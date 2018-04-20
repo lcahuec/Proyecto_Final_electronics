@@ -46,7 +46,7 @@ namespace proyectoFinal1.Models
         public int id { get; set; }
 
         [Required(ErrorMessage ="Ingrese Nombre de Cliente")]
-        [Display(Name ="CLiente:")]
+        [Display(Name ="Cliente:")]
         public string cliente { get; set; }
 
         [Required(ErrorMessage ="Ingrese Nit")]

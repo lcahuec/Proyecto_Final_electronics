@@ -4,26 +4,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Reporte de Ventas</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
-    <tr>
+    <tr class="titulos">
         <th>
             @Html.DisplayNameFor(model => model.cliente)
         </th>
+
         <th>
-            @Html.DisplayNameFor(model => model.nit)
+            @Html.DisplayNameFor(model => model.producto1.nombre)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.cantidad)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.producto1.nombre)
+            @Html.DisplayNameFor(model => model.producto1.precio)
         </th>
-        <th></th>
+        
     </tr>
 
 @foreach (var item in Model) {
@@ -31,19 +29,23 @@
         <td>
             @Html.DisplayFor(modelItem => item.cliente)
         </td>
+
         <td>
-            @Html.DisplayFor(modelItem => item.nit)
+            @Html.DisplayFor(modelItem => item.producto1.nombre)
         </td>
+
         <td>
             @Html.DisplayFor(modelItem => item.cantidad)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.producto1.nombre)
+            @Html.DisplayFor(modelItem => item.producto1.precio)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+
+
+            @Html.ActionLink("Detalles", "Details", new { id = item.id }, new { @class = "btn btn-success" })
+
+
         </td>
     </tr>
 }
