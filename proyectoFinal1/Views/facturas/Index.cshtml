@@ -24,6 +24,7 @@
         
     </tr>
 
+
 @foreach (var item in Model) {
     <tr>
         <td>
@@ -41,13 +42,10 @@
             @Html.DisplayFor(modelItem => item.producto1.precio)
         </td>
         <td>
-
-
             @Html.ActionLink("Detalles", "Details", new { id = item.id }, new { @class = "btn btn-success" })
-
-
         </td>
     </tr>
 }
+
 
 </table>
