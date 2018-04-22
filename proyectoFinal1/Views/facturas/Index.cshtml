@@ -5,7 +5,11 @@
 }
 
 <h2>Reporte de Ventas</h2>
+<p ALIGN="right">
+    <a class="btn btn-primary" href="http://localhost:49909/contactoes">Ver Mensajes</a>
 
+
+</p>
 <table class="table">
     <tr class="titulos">
         <th>
@@ -21,31 +25,32 @@
         <th>
             @Html.DisplayNameFor(model => model.producto1.precio)
         </th>
-        
+
     </tr>
 
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.cliente)
-        </td>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cliente)
+            </td>
 
-        <td>
-            @Html.DisplayFor(modelItem => item.producto1.nombre)
-        </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.producto1.nombre)
+            </td>
 
-        <td>
-            @Html.DisplayFor(modelItem => item.cantidad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.producto1.precio)
-        </td>
-        <td>
-            @Html.ActionLink("Detalles", "Details", new { id = item.id }, new { @class = "btn btn-success" })
-        </td>
-    </tr>
-}
+            <td>
+                @Html.DisplayFor(modelItem => item.cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.producto1.precio)
+            </td>
+            <td>
+                @Html.ActionLink("Detalles", "Details", new { id = item.id }, new { @class = "btn btn-success" })
+            </td>
+        </tr>
+    }
 
 
 </table>

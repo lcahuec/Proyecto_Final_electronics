@@ -65,4 +65,57 @@ namespace proyectoFinal1.Models
         public virtual producto producto1 { get; set; }
     }
 
+
+    public class contactoMetaData {
+        
+        public int id { get; set; }
+
+        [Display(Name = "Nombre: ")]
+        public string nombre { get; set; }
+
+        [Display(Name = "Email:")]
+        [Required(ErrorMessage ="Ingrese su Email.")]
+        [EmailAddress(ErrorMessage = "El email no tiene el formato correcto")]
+        public string email { get; set; }
+
+        [StringLength(8, ErrorMessage = "8 Valor max. de digitos")]
+        [RegularExpression("^\\d+$", ErrorMessage = "El campo solo acepta números.")]
+        [Display(Name = "Teléfono: ")]
+        public string telefono { get; set; }
+
+
+        [Display(Name ="Descripciòn:")]
+        public string descripcion { get; set; }
+
+    }
+
+
+    public class AspNetUsersMetaData
+    {
+        public string Id { get; set; }
+        [Display(Name ="Correo:")]
+        public string Email { get; set; }
+
+        public bool EmailConfirmed { get; set; }
+        [Display(Name ="Contraseña")]
+        public string PasswordHash { get; set; }
+
+        public string SecurityStamp { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public bool PhoneNumberConfirmed { get; set; }
+
+        public bool TwoFactorEnabled { get; set; }
+
+        public Nullable<System.DateTime> LockoutEndDateUtc { get; set; }
+
+        public bool LockoutEnabled { get; set; }
+
+        public int AccessFailedCount { get; set; }
+
+        public string UserName { get; set; }
+
+    }
+
 }

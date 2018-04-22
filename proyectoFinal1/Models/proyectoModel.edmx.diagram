@@ -19,6 +19,7 @@
         <AssociationConnector Association="proyecto_ElectronicosModel.FK_producto_bodega" ManuallyRouted="false" />
         <AssociationConnector Association="proyecto_ElectronicosModel.FK_factura_producto" ManuallyRouted="false" />
         <AssociationConnector Association="proyecto_ElectronicosModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="proyecto_ElectronicosModel.contacto" Width="1.5" PointX="7.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

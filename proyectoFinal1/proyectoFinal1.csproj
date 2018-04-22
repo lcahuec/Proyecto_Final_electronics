@@ -193,10 +193,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\bodegasController.cs" />
+    <Compile Include="Controllers\contactoesController.cs" />
     <Compile Include="Controllers\facturasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\productoesController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -214,6 +216,9 @@
       <DependentUpon>proyectoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\bodega.cs">
+      <DependentUpon>proyectoModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\contacto.cs">
       <DependentUpon>proyectoModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\C__MigrationHistory.cs">
@@ -287,6 +292,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Notify.js" />
+    <Content Include="Scripts\pnotify.custom.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Web.config">
@@ -345,6 +352,16 @@
     <Content Include="Views\detalles\Details.cshtml" />
     <Content Include="Views\detalles\Edit.cshtml" />
     <Content Include="Views\detalles\Index.cshtml" />
+    <Content Include="Views\contactoes\Create.cshtml" />
+    <Content Include="Views\contactoes\Delete.cshtml" />
+    <Content Include="Views\contactoes\Details.cshtml" />
+    <Content Include="Views\contactoes\Edit.cshtml" />
+    <Content Include="Views\contactoes\Index.cshtml" />
+    <Content Include="Views\Usuario\Create.cshtml" />
+    <Content Include="Views\Usuario\Delete.cshtml" />
+    <Content Include="Views\Usuario\Details.cshtml" />
+    <Content Include="Views\Usuario\Edit.cshtml" />
+    <Content Include="Views\Usuario\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
